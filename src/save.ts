@@ -54,7 +54,7 @@ async function run() {
         core.debug(`Tar Path: ${tarPath}`);
         await exec(`"${tarPath}"`, args);
 
-        const fileSizeLimit = 200 * 1024 * 1024; // 200MB
+        const fileSizeLimit = 500 * 1024 * 1024; // 200MB
         const archiveFileSize = fs.statSync(archivePath).size;
         core.debug(`File Size: ${archiveFileSize}`);
         if (archiveFileSize > fileSizeLimit) {
